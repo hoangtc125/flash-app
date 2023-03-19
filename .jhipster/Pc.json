@@ -1,0 +1,25 @@
+{
+  "changelogDate": "20230319060609",
+  "clientRootFolder": "flashApp",
+  "databaseType": "mongodb",
+  "fields": [
+    {
+      "fieldName": "make",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "model",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Integer"
+    }
+  ],
+  "microserviceName": "flashApp",
+  "name": "Pc",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}
