@@ -1,0 +1,22 @@
+package com.flash.app;
+
+import com.flash.app.FlashApp;
+import com.flash.app.config.AsyncSyncConfiguration;
+import com.flash.app.config.EmbeddedMongo;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
+
+/**
+ * Base composite annotation for integration tests.
+ */
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@SpringBootTest(classes = { FlashApp.class, AsyncSyncConfiguration.class })
+@EmbeddedMongo
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
+public @interface IntegrationTest {
+}
